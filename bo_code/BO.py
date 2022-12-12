@@ -24,6 +24,12 @@ from botorch.optim.optimize import optimize_acqf, optimize_acqf_list
 from botorch.utils.multi_objective.box_decompositions.non_dominated import NondominatedPartitioning
 from botorch.acquisition.multi_objective.monte_carlo import qExpectedHypervolumeImprovement
 
+tkwargs = (
+    {  # Tkwargs is a dictionary contaning data about data type and data device
+        "dtype": torch.double,
+        "device": torch.device("cuda" if torch.cuda.is_available() else "cpu"),
+    }
+)
 
 def BO_round(bounds, norm_bounds, scores, pars):
     """
@@ -37,10 +43,10 @@ def BO_round(bounds, norm_bounds, scores, pars):
     @param pars: list of previously performed parameters, i.e train_X
     @return: pars, the parameters to evaluate next.
     """
-    X = torch.from_numpy(pars)
+    X = torch.from_numpy(pars).to(tkwargs)
     # normalize input pars
     train_X = normalize(X, bounds)
-    train_Y = torch.from_numpy(scores).unsqueeze(-1)
+    train_Y = torch.from_numpy(scores).unsqueeze(-1).to(tkwargs)
     # standardize outcomes
     dim = len(pars[0])
     if dim == 2:
