@@ -3,7 +3,11 @@ import numpy as np
 import torch
 
 from bo_code.MaternSortKernel import MaternSortKernel
-from botorch.sampling.samplers import SobolQMCNormalSampler
+
+try:
+    from botorch.sampling.samplers import SobolQMCNormalSampler
+except:
+    from botorch.sampling.normal import SobolQMCNormalSampler
 
 from gpytorch.kernels import ScaleKernel, MaternKernel, RBFKernel, SpectralMixtureKernel, PolynomialKernel, LinearKernel
 from gpytorch.priors import GammaPrior
