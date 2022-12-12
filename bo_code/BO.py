@@ -43,10 +43,10 @@ def BO_round(bounds, norm_bounds, scores, pars):
     @param pars: list of previously performed parameters, i.e train_X
     @return: pars, the parameters to evaluate next.
     """
-    X = torch.from_numpy(pars).to(tkwargs)
+    X = torch.from_numpy(pars).to(**tkwargs)
     # normalize input pars
     train_X = normalize(X, bounds)
-    train_Y = torch.from_numpy(scores).unsqueeze(-1).to(tkwargs)
+    train_Y = torch.from_numpy(scores).unsqueeze(-1).to(**tkwargs)
     # standardize outcomes
     dim = len(pars[0])
     if dim == 2:
