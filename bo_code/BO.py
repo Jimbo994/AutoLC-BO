@@ -115,10 +115,10 @@ def MOBO_round(bounds, norm_bounds, scores, pars, ref_point):
     @param ref_point: Reference point from which to measure hypervolume
     @return:
     """
-    X = torch.from_numpy(pars)
+    X = torch.from_numpy(pars).to(**tkwargs)
     # normalize input pars
     train_X = normalize(X, bounds)
-    train_Y = torch.from_numpy(scores)
+    train_Y = torch.from_numpy(scores).to(**tkwargs)
     shape = train_Y.shape
     # standardize outcomes
     # train_Y = standardize(Y)
