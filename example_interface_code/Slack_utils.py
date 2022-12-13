@@ -2,7 +2,7 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
 def send_message_to_slack(text, channel):
-    client = WebClient(token='xoxb-1294950085457-2100256556481-ylSxWRn0YPV1itPoSa99XJHg')
+    client = WebClient(token='XXXXX')
 
     try:
         response = client.chat_postMessage(channel='#' + channel, text=text)
@@ -15,7 +15,7 @@ def send_message_to_slack(text, channel):
 
 def send_file_to_slack(filepath, channel):
 
-    client = WebClient(token='xoxb-1294950085457-2100256556481-ylSxWRn0YPV1itPoSa99XJHg')
+    client = WebClient(token='XXXXX')
 
     try:
         #filepath="./tmp.txt"
