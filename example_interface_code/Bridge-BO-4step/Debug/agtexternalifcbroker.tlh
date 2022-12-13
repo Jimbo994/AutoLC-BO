@@ -1,0 +1,391 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.28.29333.0 (84a18c42).
+//
+// D:\Jim_Boelrijk\AutoLC\Bridge-BO-4step\Debug\agtexternalifcbroker.tlh
+//
+// C++ source equivalent of Win32 type library C:\Program Files (x86)\Agilent Technologies\ChemStation\CORE\AgtExternalIfcBroker.exe
+// compiler-generated file created 10/17/22 at 18:05:37 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\Program Files (x86)\Agilent Technologies\Agilent OpenLab Data Provider for ChemStation\bin\hpchemifc.tlb"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("ebd6c1c0-5555-4a48-9c28-784c47ce43b2"))
+/* LIBID */ __AgtExternalIfcBroker;
+struct __declspec(uuid("b507223a-e32c-4d5c-be0d-4f537ea98140"))
+/* dual interface */ IPublishedChemStations;
+struct __declspec(uuid("94e23cdf-404c-453b-bdaf-94fc0bb4b649"))
+/* dual interface */ IPublishChemStation;
+struct __declspec(uuid("627f6f18-6152-4c77-b28f-cc5f8195faf7"))
+/* dual interface */ IChemStationBSP;
+struct __declspec(uuid("e40554da-64bd-4e8e-8eee-a2c40d45e1cc"))
+/* dual interface */ IChemStationCPItems;
+enum CPStackFrameType;
+struct __declspec(uuid("3ecce60b-f26c-42b7-90cc-c47d220bfd4e"))
+/* dual interface */ IChemStationCPStackFrame;
+struct __declspec(uuid("95595ba3-dc0c-4295-a163-30b8bce0b802"))
+/* dual interface */ IChemStationCPCallStack;
+struct __declspec(uuid("e2308155-afbf-4c64-9e64-e4a025411d62"))
+/* dual interface */ IChemStationCP;
+struct __declspec(uuid("5d056cb3-9633-4e28-9f9e-4ef77eb2a77f"))
+/* dual interface */ IUICallback;
+struct __declspec(uuid("7198b515-cfeb-4bf5-97b5-dc6192daea1a"))
+/* dual interface */ IPublishedChemStation;
+struct __declspec(uuid("4feb4c9e-25ed-4b43-bc6c-e29e524e805e"))
+/* dual interface */ IChemStationConnector;
+struct /* coclass */ PublishedChemStation;
+struct /* coclass */ ChemStationConnector;
+struct __declspec(uuid("96bfe48c-875f-429b-82bd-5687a26e5d14"))
+/* dispinterface */ IChemStationBrokerDefInterface;
+struct /* coclass */ ChemStationBroker;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IPublishedChemStations, __uuidof(IPublishedChemStations));
+_COM_SMARTPTR_TYPEDEF(IPublishChemStation, __uuidof(IPublishChemStation));
+_COM_SMARTPTR_TYPEDEF(IChemStationBSP, __uuidof(IChemStationBSP));
+_COM_SMARTPTR_TYPEDEF(IChemStationCPItems, __uuidof(IChemStationCPItems));
+_COM_SMARTPTR_TYPEDEF(IChemStationCPStackFrame, __uuidof(IChemStationCPStackFrame));
+_COM_SMARTPTR_TYPEDEF(IChemStationCPCallStack, __uuidof(IChemStationCPCallStack));
+_COM_SMARTPTR_TYPEDEF(IChemStationCP, __uuidof(IChemStationCP));
+_COM_SMARTPTR_TYPEDEF(IUICallback, __uuidof(IUICallback));
+_COM_SMARTPTR_TYPEDEF(IPublishedChemStation, __uuidof(IPublishedChemStation));
+_COM_SMARTPTR_TYPEDEF(IChemStationConnector, __uuidof(IChemStationConnector));
+_COM_SMARTPTR_TYPEDEF(IChemStationBrokerDefInterface, __uuidof(IChemStationBrokerDefInterface));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b507223a-e32c-4d5c-be0d-4f537ea98140"))
+IPublishedChemStations : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ struct IEnumVARIANT * * pEnum ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pCount ) = 0;
+      virtual HRESULT __stdcall Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ IDispatch * * pItem ) = 0;
+};
+
+struct __declspec(uuid("94e23cdf-404c-453b-bdaf-94fc0bb4b649"))
+IPublishChemStation : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Publish (
+        /*[in]*/ IDispatch * Ifc,
+        /*[out,retval]*/ long * pCookie ) = 0;
+      virtual HRESULT __stdcall Revoke (
+        /*[in]*/ long PCSNum,
+        /*[in]*/ long ProcessId,
+        /*[in]*/ BSTR Name,
+        /*[in]*/ VARIANT_BOOL bOnline,
+        /*[in]*/ VARIANT_BOOL bMustAuthenticate,
+        /*[in]*/ long Cookie ) = 0;
+};
+
+struct __declspec(uuid("627f6f18-6152-4c77-b28f-cc5f8195faf7"))
+IChemStationBSP : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Connect (
+        /*[in]*/ long ChemStationBSPCallback,
+        /*[in]*/ long Subject1,
+        /*[in]*/ long size1,
+        /*[in]*/ long Subject2,
+        /*[in]*/ long size2,
+        /*[in]*/ long pContext,
+        /*[out,retval]*/ long * pBspWnd ) = 0;
+      virtual HRESULT __stdcall Notify (
+        /*[in]*/ long hBspWnd,
+        /*[in]*/ long NotifyType,
+        /*[in]*/ long pSubject1,
+        /*[in]*/ long pUserMsgInfo,
+        /*[in]*/ long pbNotifying ) = 0;
+};
+
+struct __declspec(uuid("e40554da-64bd-4e8e-8eee-a2c40d45e1cc"))
+IChemStationCPItems : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ struct IEnumVARIANT * * pEnum ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pCount ) = 0;
+      virtual HRESULT __stdcall Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ BSTR * pItem ) = 0;
+};
+
+enum CPStackFrameType
+{
+    Macro = 1,
+    NumericFunction = 2,
+    StringFunction = 3
+};
+
+struct __declspec(uuid("3ecce60b-f26c-42b7-90cc-c47d220bfd4e"))
+IChemStationCPStackFrame : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pName ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ enum CPStackFrameType * pType ) = 0;
+      virtual HRESULT __stdcall get_Depth (
+        /*[out,retval]*/ long * pDepth ) = 0;
+      virtual HRESULT __stdcall get_Parameters (
+        /*[out,retval]*/ struct IChemStationCPItems * * pCommands ) = 0;
+      virtual HRESULT __stdcall get_LocalVariables (
+        /*[out,retval]*/ struct IChemStationCPItems * * pCommands ) = 0;
+};
+
+struct __declspec(uuid("95595ba3-dc0c-4295-a163-30b8bce0b802"))
+IChemStationCPCallStack : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ struct IEnumVARIANT * * pEnum ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pCount ) = 0;
+      virtual HRESULT __stdcall Item (
+        /*[in]*/ VARIANT index,
+        /*[out,retval]*/ struct IChemStationCPStackFrame * * pFrame ) = 0;
+};
+
+struct __declspec(uuid("e2308155-afbf-4c64-9e64-e4a025411d62"))
+IChemStationCP : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall RequestWait (
+        /*[in]*/ BSTR CPName,
+        /*[in]*/ BSTR Commandline ) = 0;
+      virtual HRESULT __stdcall RequestNoWait (
+        /*[in]*/ BSTR CPName,
+        /*[in]*/ BSTR Commandline ) = 0;
+      virtual HRESULT __stdcall GetVariable (
+        /*[in]*/ BSTR VariableName,
+        /*[out,retval]*/ VARIANT * pVar ) = 0;
+      virtual HRESULT __stdcall SetVariable (
+        /*[in]*/ BSTR VariableName,
+        /*[in]*/ VARIANT Var ) = 0;
+      virtual HRESULT __stdcall RemoveVariable (
+        /*[in]*/ BSTR VariableName ) = 0;
+      virtual HRESULT __stdcall AddObject (
+        /*[in]*/ IDispatch * pObject,
+        /*[out,retval]*/ long * pObjectId ) = 0;
+      virtual HRESULT __stdcall RemoveObject (
+        /*[in]*/ long ObjectId ) = 0;
+      virtual HRESULT __stdcall get_Commands (
+        /*[out,retval]*/ struct IChemStationCPItems * * pCommands ) = 0;
+      virtual HRESULT __stdcall get_Functions (
+        /*[out,retval]*/ struct IChemStationCPItems * * pFunctions ) = 0;
+      virtual HRESULT __stdcall get_Macros (
+        /*[out,retval]*/ struct IChemStationCPItems * * pMacros ) = 0;
+      virtual HRESULT __stdcall get_Variables (
+        /*[out,retval]*/ struct IChemStationCPItems * * pVariables ) = 0;
+      virtual HRESULT __stdcall get_CPs (
+        /*[out,retval]*/ struct IChemStationCPItems * * pVariables ) = 0;
+      virtual HRESULT __stdcall GetCallStack (
+        /*[in]*/ BSTR CPName,
+        /*[out,retval]*/ struct IChemStationCPCallStack * * pCallStack ) = 0;
+      virtual HRESULT __stdcall _GetObject (
+        /*[in]*/ long ObjectId,
+        /*[out,retval]*/ IDispatch * * pObject ) = 0;
+      virtual HRESULT __stdcall GetNumVariable (
+        /*[in]*/ BSTR VariableName,
+        /*[out,retval]*/ double * pVar ) = 0;
+      virtual HRESULT __stdcall SetNumVariable (
+        /*[in]*/ BSTR VariableName,
+        /*[in]*/ double Var ) = 0;
+      virtual HRESULT __stdcall GetStringVariable (
+        /*[in]*/ BSTR VariableName,
+        /*[out,retval]*/ BSTR * pVar ) = 0;
+      virtual HRESULT __stdcall SetStringVariable (
+        /*[in]*/ BSTR VariableName,
+        /*[in]*/ BSTR Var ) = 0;
+      virtual HRESULT __stdcall NumFunction (
+        /*[in]*/ BSTR CPName,
+        /*[in]*/ BSTR Commandline,
+        /*[out,retval]*/ double * pReturn ) = 0;
+      virtual HRESULT __stdcall StringFunction (
+        /*[in]*/ BSTR CPName,
+        /*[in]*/ BSTR Commandline,
+        /*[out,retval]*/ BSTR * pReturn ) = 0;
+};
+
+struct __declspec(uuid("5d056cb3-9633-4e28-9f9e-4ef77eb2a77f"))
+IUICallback : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall UIThreadCall (
+        /*[in]*/ VARIANT param ) = 0;
+};
+
+struct __declspec(uuid("7198b515-cfeb-4bf5-97b5-dc6192daea1a"))
+IPublishedChemStation : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_PCSNum (
+        /*[out,retval]*/ long * pPCSNum ) = 0;
+      virtual HRESULT __stdcall get_ProcessId (
+        /*[out,retval]*/ long * pProcessId ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * Name ) = 0;
+      virtual HRESULT __stdcall get_Online (
+        /*[out,retval]*/ VARIANT_BOOL * pbOnline ) = 0;
+      virtual HRESULT __stdcall get_DataAccess (
+        /*[out,retval]*/ struct IChemDataAccess * * DataAccess ) = 0;
+      virtual HRESULT __stdcall get_CP (
+        /*[out,retval]*/ struct IChemStationCP * * pCP ) = 0;
+      virtual HRESULT __stdcall Advise (
+        /*[in]*/ struct IChemNotifySink * pSink,
+        /*[out,retval]*/ long * pCookie ) = 0;
+      virtual HRESULT __stdcall Unadvise (
+        /*[in]*/ long Cookie ) = 0;
+      virtual HRESULT __stdcall get_Authenticated (
+        /*[out,retval]*/ VARIANT_BOOL * pbAuthenticated ) = 0;
+      virtual HRESULT __stdcall get_ClientMustAuthenticate (
+        /*[out,retval]*/ VARIANT_BOOL * pbClientMustAuthenticate ) = 0;
+      virtual HRESULT __stdcall get_Authenticator (
+        /*[out,retval]*/ BSTR * pHostUrl ) = 0;
+      virtual HRESULT __stdcall Authenticate (
+        /*[in]*/ BSTR LoginId ) = 0;
+      virtual HRESULT __stdcall Authenticate2 (
+        /*[in]*/ BSTR User,
+        /*[in]*/ BSTR Domain,
+        /*[in]*/ BSTR Password ) = 0;
+      virtual HRESULT __stdcall Reauthenticate (
+        /*[in]*/ BSTR Password ) = 0;
+      virtual HRESULT __stdcall CallMeOnUIThread (
+        /*[in]*/ struct IUICallback * pCallback,
+        /*[in]*/ VARIANT param ) = 0;
+};
+
+struct __declspec(uuid("4feb4c9e-25ed-4b43-bc6c-e29e524e805e"))
+IChemStationConnector : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_PCSNum (
+        /*[out,retval]*/ long * pPCSNum ) = 0;
+      virtual HRESULT __stdcall get_ProcessId (
+        /*[out,retval]*/ long * pProcessId ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * Name ) = 0;
+      virtual HRESULT __stdcall get_Online (
+        /*[out,retval]*/ VARIANT_BOOL * pbOnline ) = 0;
+      virtual HRESULT __stdcall get_ClientMustAuthenticate (
+        /*[out,retval]*/ VARIANT_BOOL * pbClientMustAuthenticate ) = 0;
+      virtual HRESULT __stdcall get_Authenticator (
+        /*[out,retval]*/ BSTR * pHostUrl ) = 0;
+      virtual HRESULT __stdcall Connect (
+        /*[in]*/ BSTR LoginId,
+        /*[out,retval]*/ struct IPublishedChemStation * * ChemStation ) = 0;
+      virtual HRESULT __stdcall Connect2 (
+        /*[in]*/ BSTR User,
+        /*[in]*/ BSTR Domain,
+        /*[in]*/ BSTR Password,
+        /*[out,retval]*/ struct IPublishedChemStation * * ChemStation ) = 0;
+};
+
+struct __declspec(uuid("47fb3fbf-ac1e-43fd-a8fe-1dbeac5ebf36"))
+PublishedChemStation;
+    // [ default ] interface IPublishedChemStation
+    // [ default, source ] interface IChemNotifySink
+    // interface IChemDataAccess
+    // interface IChemStationCP
+    // [ restricted ] interface IChemStationBSP
+
+struct __declspec(uuid("e425a027-fce5-4f68-9c05-ac708ddde60e"))
+ChemStationConnector;
+    // [ default ] interface IChemStationConnector
+
+struct __declspec(uuid("96bfe48c-875f-429b-82bd-5687a26e5d14"))
+IChemStationBrokerDefInterface : IDispatch
+{};
+
+struct __declspec(uuid("2e080fe2-42be-4172-8931-c647b5f73e07"))
+ChemStationBroker;
+    // [ default ] dispinterface IChemStationBrokerDefInterface
+    // interface IPublishedChemStations
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_AgtExternalIfcBroker =
+    {0xebd6c1c0,0x5555,0x4a48,{0x9c,0x28,0x78,0x4c,0x47,0xce,0x43,0xb2}};
+extern "C" const GUID __declspec(selectany) IID_IPublishedChemStations =
+    {0xb507223a,0xe32c,0x4d5c,{0xbe,0x0d,0x4f,0x53,0x7e,0xa9,0x81,0x40}};
+extern "C" const GUID __declspec(selectany) IID_IPublishChemStation =
+    {0x94e23cdf,0x404c,0x453b,{0xbd,0xaf,0x94,0xfc,0x0b,0xb4,0xb6,0x49}};
+extern "C" const GUID __declspec(selectany) IID_IChemStationBSP =
+    {0x627f6f18,0x6152,0x4c77,{0xb2,0x8f,0xcc,0x5f,0x81,0x95,0xfa,0xf7}};
+extern "C" const GUID __declspec(selectany) IID_IChemStationCPItems =
+    {0xe40554da,0x64bd,0x4e8e,{0x8e,0xee,0xa2,0xc4,0x0d,0x45,0xe1,0xcc}};
+extern "C" const GUID __declspec(selectany) IID_IChemStationCPStackFrame =
+    {0x3ecce60b,0xf26c,0x42b7,{0x90,0xcc,0xc4,0x7d,0x22,0x0b,0xfd,0x4e}};
+extern "C" const GUID __declspec(selectany) IID_IChemStationCPCallStack =
+    {0x95595ba3,0xdc0c,0x4295,{0xa1,0x63,0x30,0xb8,0xbc,0xe0,0xb8,0x02}};
+extern "C" const GUID __declspec(selectany) IID_IChemStationCP =
+    {0xe2308155,0xafbf,0x4c64,{0x9e,0x64,0xe4,0xa0,0x25,0x41,0x1d,0x62}};
+extern "C" const GUID __declspec(selectany) IID_IUICallback =
+    {0x5d056cb3,0x9633,0x4e28,{0x9f,0x9e,0x4e,0xf7,0x7e,0xb2,0xa7,0x7f}};
+extern "C" const GUID __declspec(selectany) IID_IPublishedChemStation =
+    {0x7198b515,0xcfeb,0x4bf5,{0x97,0xb5,0xdc,0x61,0x92,0xda,0xea,0x1a}};
+extern "C" const GUID __declspec(selectany) IID_IChemStationConnector =
+    {0x4feb4c9e,0x25ed,0x4b43,{0xbc,0x6c,0xe2,0x9e,0x52,0x4e,0x80,0x5e}};
+extern "C" const GUID __declspec(selectany) CLSID_PublishedChemStation =
+    {0x47fb3fbf,0xac1e,0x43fd,{0xa8,0xfe,0x1d,0xbe,0xac,0x5e,0xbf,0x36}};
+extern "C" const GUID __declspec(selectany) CLSID_ChemStationConnector =
+    {0xe425a027,0xfce5,0x4f68,{0x9c,0x05,0xac,0x70,0x8d,0xdd,0xe6,0x0e}};
+extern "C" const GUID __declspec(selectany) DIID_IChemStationBrokerDefInterface =
+    {0x96bfe48c,0x875f,0x429b,{0x82,0xbd,0x56,0x87,0xa2,0x6e,0x5d,0x14}};
+extern "C" const GUID __declspec(selectany) CLSID_ChemStationBroker =
+    {0x2e080fe2,0x42be,0x4172,{0x89,0x31,0xc6,0x47,0xb5,0xf7,0x3e,0x07}};
+
+#pragma pack(pop)
