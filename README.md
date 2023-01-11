@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1ebAcH8z0IRuR3kD7Kus-ZLIVqaUKVljo?usp=sharing)
 
-Code related to publication titled: [Closed-loop automatic gradient design for liquid chromatography using Bayesian optimization](https://chemrxiv.org/engage/chemrxiv/article-details/62e2a383e7fc8f9e388caabc)
+Code related to publication titled: [Closed-loop automatic gradient design for liquid chromatography using Bayesian optimization](https://doi.org/10.1016/j.aca.2023.340789)
 
 <img src="/figures/example.png" width="1000"/>
 
