@@ -11,4 +11,4 @@ Please take a look at the Jupyter Notebook or checkout the [Google Collab](https
 
 In the folder example interface code, we show C++ and Python code that can be used to do closed-loop Bayesian Optimization with Agilent software and hardware. This code is less straightforward to run as it requires some changes to the specific setup at hand (Paths, Chemstation instance, Slack support, etc.). Please do not hesitate to email us if you need any clarifications.
 
-When using this code, please cite: [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.4018965.svg)](https://doi.org/10.1016/j.aca.2023.340789) 
+When using this code, please cite: [![DOI:10.1016/j.aca.2023.340789](http://img.shields.io/badge/DOI-10.1016/j.aca.2023.340789-B31B1B.svg)](https://doi.org/10.1016/j.aca.2023.340789)
